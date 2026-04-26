@@ -11,7 +11,7 @@ A simple and interactive birthday card built using HTML, CSS, and JavaScript.
 
 🚀 Live Demo
 
-👉 https://your-username.github.io/Birthday-Card-Design/
+👉 https://mohan2362.github.io/Birthday-Card-Design/
 
  🛠️ Tech Stack
 
