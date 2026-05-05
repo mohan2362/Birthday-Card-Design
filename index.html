@@ -350,17 +350,19 @@ p {
   color: white;
   border: none;
 } 
-.title {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid pink;
-  width: 0;
-  animation: typing 2s steps(20) forwards, blink 0.5s infinite;
-}
-@keyframes typing {
-  to { width: 100%; }
-}
 
+  .title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  color: #c2185b;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  text-align: center;
+  width: 100%;
+  overflow: visible;
+  animation: textGlow 2s ease-in-out
+ infinite alternative;
+}
 @keyframes blink {
   50% { border-color: transparent; }
 }
