@@ -189,29 +189,7 @@ position: fixed;
     position: relative;
     top: -18px;
     box-shadow: 0 0 6px rgba(255,220,0,0.3);
-  }
-  #musicBtn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-
-  padding: 12px 18px;
-  border: none;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, #ff2e63, #ff6b9d);
-  cursor: pointer;
-  box-shadow: 0 8px 25px rgba(255, 46, 99, 0.4);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-}
-#musicBtn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 30px rgba(255, 46, 99, 0.9);
-}
+  }
 .candle::before {
     content: '';
     position: absolute;
@@ -468,38 +446,6 @@ heartEl.appendChild(s);
       --delay:${(Math.random()*4).toFixed(1)}s;
     heartsEl.appendChild(h);
   }
-</script>
-<button id="musicBtn">🎵 Play Music</button>
-
-<audio id="bg-music" loop>
-<input type="range" min="0" max="1" step="0.1" onchange="bgMusic.volume=this.value">
-<source src="birthday.mp3" type="audio/mp3">
-</audio> 
-<script>
-const btn =
- document.getElementById("musicBtn");
-const music =
- document.getElementById("bg-music");
-
-btn.addEventListener("click", () => {
-  if (music.paused) {
-    music.play();
-    btn.innerText = "⏸ Pause Music";
-  } else {
-    music.pause();
-    btn.innerText = "🎵 Play Music";
-  music.volume = 0;
-music.play();
-let vol = 0;
-let fade = setInterval(() => {
-  if (vol < 1) {
-    vol += 0.1;
-    music.volume = vol;
-  } else {
-    clearInterval(fade);
-  }
-}, 200);}
-});
 </script>
 </body>
 </html>
