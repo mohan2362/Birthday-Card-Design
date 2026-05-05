@@ -406,46 +406,51 @@ Keep smiling always 🙂
   for (let i = 0; i < 120; i++) {
     const s = document.createElement('div');
     s.className = 'star';
+
     const size = Math.random() * 3 + 1;
-   s.style.cssText = `
-  width:${size}px;
-  height:${size}px;
-  left:${Math.random()*80+10}%;
-  top:${Math.random()*100}%;
-  --d:${(Math.random()*3+1).toFixed(1)}s;
-  animation-delay:${(Math.random()*4).toFixed(1)}s;
-`;
-heartEl.appendChild(s);
+
+    s.style.cssText = `
+      width:${size}px;
+      height:${size}px;
+      left:${Math.random() * 100}%;
+      top:${Math.random() * 100}%;
+      --d:${(Math.random() * 3 + 1).toFixed(1)}s;
+      animation-delay:${(Math.random() * 4).toFixed(1)}s;
+    `;
+    starsEl.appendChild(s);
   }
+  // Confetti
   const confettiEl = document.getElementById('confetti');
   const colors = ['#ff6b9d','#ffd93d','#6bcb77','#4d96ff','#ff6348','#a29bfe','#fd79a8','#fdcb6e'];
-   for (let i = 0; i < 60; i++) {
+
+  for (let i = 0; i < 60; i++) {
     const c = document.createElement('div');
     c.className = 'confetti-piece';
-    const w = Math.random()*8+4, h = Math.random()*12+5;
-     h.style.cssText = `
-      width:${w}px; height:${h}px;
-      left:${Math.random()*100}%;
-      background:${colors[Math.floor(Math.random()*colors.length)]};
-      --fall-duration:${(Math.random()*4+3).toFixed(1)}s;
-      --fall-delay:${(Math.random()*5).toFixed(1)}s;
-      border-radius:${Math.random()>0.5?'50%':'2px'};
+    const w = Math.random() * 8 + 4;
+    const h = Math.random() * 12 + 5;
+    c.style.cssText = `
+      width:${w}px;
+      height:${h}px;
+      left:${Math.random() * 100}%;
+      background:${colors[Math.floor(Math.random() * colors.length)]};
+      --fall-duration:${(Math.random() * 4 + 3).toFixed(1)}s;
+      --fall-delay:${(Math.random() * 5).toFixed(1)}s;
+      border-radius:${Math.random() > 0.5 ? '50%' : '2px'};
     `;
     confettiEl.appendChild(c);
   }
- const heartsEl = document.getElementById('hearts');
+  const heartsEl = document.getElementById('hearts');
   const heartEmojis = ['💖','💕','💗','🩷','💓'];
   for (let i = 0; i < 8; i++) {
-    const h = document.createElement('div');
-    h.className = 'heart';
-    h.textContent = heartEmojis[Math.floor(Math.random()*heartEmojis.length)];
-    h.style.cssText = `
-      --size:${(Math.random()*0.8+0.6).toFixed(1)}rem;
-      --x:${Math.random()*80+10}%;
-      --dur:${(Math.random()*3+3).toFixed(1)}s;
-      --delay:${(Math.random()*4).toFixed(1)}s;
-    heartsEl.appendChild(h);
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+   heart.style.cssText = `
+      font-size:${(Math.random() * 0.8 + 0.6).toFixed(1)}rem;
+      left:${Math.random() * 80 + 10}%;
+      --dur:${(Math.random() * 3 + 3).toFixed(1)}s;
+      --delay:${(Math.random() * 4).toFixed(1)}s;
+    `;
+   heartsEl.appendChild(heart);
   }
 </script>
-</body>
-</html>
